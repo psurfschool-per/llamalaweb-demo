@@ -1,0 +1,244 @@
+
+> llamalaweb@1.0.0 dev
+> astro dev --host 0.0.0.0
+
+[2m15:51:30[22m [34m[vite][39m connected.
+[2m15:51:30[22m [34m[types][39m Generated [2m2ms[22m
+[2m15:51:30[22m [34m[vite][39m connected.
+[42m[1m astro [22m[49m [32mv7.4.2[39m [2mready in[22m 3314 [2mms[22m
+[2m┃[22m Local    [36mhttp://localhost:4321/[39m
+[2m┃[22m Network  [36mhttp://192.168.18.142:4321/[39m
+[2m15:51:30[22m [32mwatching for file changes...[39m
+[2m15:52:05[22m [34m[200][39m / [2m72ms[22m
+[2m15:52:07[22m [34m[200][39m / [2m4ms[22m
+[2m15:52:39[22m Configuration file updated. Restarting...
+[2m15:52:39[22m [34m[vite][39m program reload
+[2m15:52:39[22m [34m[vite][39m program reload
+[2m15:52:40[22m [34m[vite][39m connected.
+[2m15:52:40[22m [34m[vite][39m connected.
+[2m15:52:40[22m [34m[vite][39m server restarted.
+[2m15:53:17[22m [34m[200][39m / [2m60ms[22m
+[2m15:56:28[22m [34m[200][39m / [2m7ms[22m
+[2m16:08:39[22m [34m[200][39m / [2m1177ms[22m
+[2m17:27:21[22m [34m[200][39m / [2m152ms[22m
+[2m17:38:40[22m [34m[watch][39m /src/styles/global.css
+[2m17:38:42[22m [34m[watch][39m /src/styles/global.css
+[2m17:39:36[22m [34m[watch][39m /src/styles/global.css
+[2m20:12:08[22m [34m[200][39m / [2m183ms[22m
+[2m20:12:08[22m [34m[200][39m / [2m139ms[22m
+[2m20:14:29[22m [34m[200][39m / [2m16ms[22m
+[2m20:15:46[22m [34m[watch][39m /src/styles/global.css
+[2m20:15:46[22m [34m[watch][39m /src/styles/global.css
+[2m20:15:46[22m [34m[watch][39m /src/styles/global.css
+[2m20:15:46[22m [34m[watch][39m /src/styles/global.css
+[2m20:15:47[22m [34m[200][39m / [2m63ms[22m
+[2m20:17:11[22m [34m[200][39m / [2m7ms[22m
+[2m20:20:21[22m [34m[watch][39m /src/styles/global.css
+[2m20:20:21[22m [34m[watch][39m /src/styles/global.css
+[2m20:20:21[22m [34m[watch][39m /src/styles/global.css
+[2m20:20:22[22m [34m[200][39m / [2m60ms[22m
+[2m20:24:05[22m [34m[200][39m / [2m8ms[22m
+[2m20:32:06[22m [34m[200][39m / [2m8ms[22m
+[2m20:34:37[22m [34m[watch][39m /src/styles/global.css
+[31m[1m20:34:57[22m [ERROR][39m [PARSE_ERROR] Invalid Unicode escape sequence
+    ╭─[ src/data/site.ts:87:38 ]
+    │
+ 87 │       "Monitoreo de disponibilidad",\r\n      "Seguimiento activo de la web",
+    │                                      ┬  
+    │                                      ╰── 
+────╯
+
+[2m20:36:04[22m [34m[watch][39m /src/styles/global.css
+[2m20:36:04[22m [34m[200][39m / [2m49ms[22m
+[2m20:37:34[22m [34m[watch][39m /src/styles/global.css
+[2m20:37:34[22m [34m[200][39m / [2m47ms[22m
+[2m20:39:31[22m [34m[200][39m / [2m4ms[22m
+[2m20:42:29[22m [34m[watch][39m /src/styles/global.css
+[2m20:42:30[22m [34m[200][39m / [2m41ms[22m
+[2m20:42:48[22m [34m[200][39m / [2m8ms[22m
+[2m20:49:54[22m [34m[watch][39m /src/styles/global.css
+[2m20:49:54[22m [34m[watch][39m /src/styles/global.css
+[2m20:50:23[22m [34m[200][39m / [2m233ms[22m
+[2m20:50:33[22m [34m[200][39m / [2m10ms[22m
+[2m20:50:57[22m [34m[200][39m / [2m24ms[22m
+[2m20:53:26[22m [34m[watch][39m /src/styles/global.css
+[31m[1m20:53:27[22m [ERROR][39m [PARSE_ERROR] Unexpected token
+    ╭─[ src/data/site.ts:47:15 ]
+    │
+ 47 │   highlighted?: boolean;
+    │               ┬  
+    │               ╰── 
+────╯
+
+[2m20:53:29[22m [34m[watch][39m /src/styles/global.css
+[31m[1m20:53:29[22m [ERROR][39m [PARSE_ERROR] Unexpected token
+    ╭─[ src/data/site.ts:47:15 ]
+    │
+ 47 │   highlighted?: boolean;
+    │               ┬  
+    │               ╰── 
+────╯
+
+[2m20:53:37[22m [34m[watch][39m /src/styles/global.css
+[31m[1m20:53:37[22m [ERROR][39m [PARSE_ERROR] Unexpected token
+    ╭─[ src/data/site.ts:47:15 ]
+    │
+ 47 │   highlighted?: boolean;
+    │               ┬  
+    │               ╰── 
+────╯
+
+[2m20:53:41[22m [34m[watch][39m src/layouts/Base.astro
+[31m[1m20:53:42[22m [ERROR][39m [PARSE_ERROR] Unexpected token
+    ╭─[ src/data/site.ts:47:15 ]
+    │
+ 47 │   highlighted?: boolean;
+    │               ┬  
+    │               ╰── 
+────╯
+
+[31m[1m20:58:18[22m [ERROR][39m [PARSE_ERROR] Unexpected token
+    ╭─[ src/data/site.ts:47:15 ]
+    │
+ 47 │   highlighted?: boolean;
+    │               ┬  
+    │               ╰── 
+────╯
+
+[2m20:59:04[22m [34m[watch][39m /src/styles/global.css
+[2m20:59:04[22m [34m[watch][39m /src/styles/global.css
+[2m20:59:06[22m [34m[200][39m / [2m186ms[22m
+[2m20:59:12[22m [34m[watch][39m /src/styles/global.css
+[2m20:59:12[22m [34m[watch][39m /src/styles/global.css
+[2m20:59:12[22m [34m[watch][39m src/layouts/Base.astro
+[2m20:59:13[22m [34m[200][39m / [2m57ms[22m
+[2m20:59:29[22m [34m[200][39m / [2m5ms[22m
+[2m20:59:57[22m [34m[watch][39m /src/styles/global.css
+[2m20:59:58[22m [34m[200][39m / [2m51ms[22m
+[2m21:00:06[22m [34m[200][39m / [2m5ms[22m
+[2m21:01:02[22m [34m[200][39m / [2m8ms[22m
+[2m21:04:58[22m [34m[watch][39m /src/styles/global.css
+[2m21:04:58[22m [34m[watch][39m /src/styles/global.css
+[2m21:04:58[22m [34m[watch][39m /src/styles/global.css
+[2m21:04:58[22m [34m[watch][39m src/layouts/Base.astro
+[2m21:04:59[22m [34m[200][39m / [2m82ms[22m
+[2m21:05:04[22m [34m[watch][39m /src/styles/global.css
+[2m21:05:05[22m [34m[200][39m / [2m45ms[22m
+[2m21:05:17[22m [34m[200][39m / [2m4ms[22m
+[2m21:05:48[22m [34m[200][39m / [2m12ms[22m
+[2m21:05:57[22m [34m[200][39m / [2m7ms[22m
+[2m21:06:05[22m [34m[watch][39m /src/styles/global.css
+[2m21:06:06[22m [34m[200][39m / [2m47ms[22m
+[2m21:06:12[22m [34m[200][39m / [2m8ms[22m
+[2m21:07:55[22m [34m[200][39m / [2m169ms[22m
+[2m21:09:49[22m [34m[200][39m / [2m50ms[22m
+[2m21:12:14[22m [34m[200][39m / [2m31ms[22m
+[2m21:21:34[22m [34m[200][39m / [2m160ms[22m
+[2m21:22:50[22m [34m[watch][39m /src/styles/global.css
+[2m21:23:26[22m [34m[200][39m / [2m31330ms[22m
+[2m21:24:17[22m [34m[200][39m / [2m366ms[22m
+[2m21:25:31[22m [34m[watch][39m /src/styles/global.css
+[2m21:25:31[22m [34m[watch][39m /src/styles/global.css
+[2m21:25:34[22m [34m[200][39m / [2m676ms[22m
+[2m21:26:40[22m [34m[watch][39m /src/styles/global.css
+[2m21:26:43[22m [34m[200][39m / [2m292ms[22m
+[31m[1m21:26:43[22m [ERROR][39m pen is not defined
+  [1mStack trace:[22m
+[2m    at eval (C:\Users\web\Desktop\llamalaweb.com\src\components\Pricing.astro:39:36)
+    at eval (C:\Users\web\Desktop\llamalaweb.com\src\components\Pricing.astro:18:9)
+    [...] See full stack trace in the browser, or rerun with --verbose.[22m
+[2m21:26:44[22m [34m[watch][39m /src/styles/global.css
+[2m21:26:46[22m [34m[200][39m / [2m51ms[22m
+[2m21:27:01[22m [34m[watch][39m /src/styles/global.css
+[2m21:27:02[22m [34m[200][39m / [2m73ms[22m
+[2m21:27:20[22m [34m[watch][39m /src/styles/global.css
+[2m21:27:25[22m [34m[watch][39m /src/styles/global.css
+[2m21:27:27[22m [34m[200][39m / [2m90ms[22m
+[2m21:27:27[22m [34m[watch][39m /src/styles/global.css
+[2m21:27:30[22m [34m[200][39m / [2m102ms[22m
+[2m21:27:35[22m [34m[watch][39m /src/styles/global.css
+[2m21:27:36[22m [34m[200][39m / [2m127ms[22m
+[2m21:28:10[22m [34m[200][39m / [2m7ms[22m
+[2m21:29:53[22m [34m[watch][39m /src/styles/global.css
+[2m21:29:53[22m [34m[200][39m / [2m48ms[22m
+[31m[1m21:29:53[22m [ERROR][39m pen is not defined
+  [1mStack trace:[22m
+[2m    at eval (C:\Users\web\Desktop\llamalaweb.com\src\components\Hero.astro:4:1)
+    [...] See full stack trace in the browser, or rerun with --verbose.[22m
+[2m21:29:58[22m [34m[watch][39m /src/styles/global.css
+[2m21:29:58[22m [34m[200][39m / [2m92ms[22m
+[31m[1m21:29:58[22m [ERROR][39m pen is not defined
+  [1mStack trace:[22m
+[2m    at eval (C:\Users\web\Desktop\llamalaweb.com\src\components\Hero.astro:61:79)
+    [...] See full stack trace in the browser, or rerun with --verbose.[22m
+[2m21:29:59[22m [34m[watch][39m /src/styles/global.css
+[2m21:29:59[22m [34m[200][39m / [2m193ms[22m
+[2m21:30:36[22m [34m[200][39m / [2m12ms[22m
+[2m21:30:49[22m [34m[watch][39m /src/styles/global.css
+[2m21:30:50[22m [34m[watch][39m /src/styles/global.css
+[2m21:30:50[22m [34m[watch][39m /src/styles/global.css
+[2m21:30:50[22m [34m[200][39m / [2m71ms[22m
+[2m21:30:57[22m [34m[200][39m / [2m9ms[22m
+[2m21:33:19[22m [34m[watch][39m /src/styles/global.css
+[2m21:33:20[22m [34m[200][39m / [2m93ms[22m
+[31m[1m21:33:20[22m [ERROR][39m usd is not defined
+  [1mStack trace:[22m
+[2m    at eval (C:\Users\web\Desktop\llamalaweb.com\src\components\Hero.astro:61:79)
+    [...] See full stack trace in the browser, or rerun with --verbose.[22m
+[2m21:33:36[22m [34m[200][39m / [2m10ms[22m
+[31m[1m21:33:36[22m [ERROR][39m usd is not defined
+  [1mStack trace:[22m
+[2m    at eval (C:\Users\web\Desktop\llamalaweb.com\src\components\Hero.astro:61:79)
+    [...] See full stack trace in the browser, or rerun with --verbose.[22m
+[2m21:33:45[22m [34m[200][39m / [2m5ms[22m
+[31m[1m21:33:45[22m [ERROR][39m usd is not defined
+  [1mStack trace:[22m
+[2m    at eval (C:\Users\web\Desktop\llamalaweb.com\src\components\Hero.astro:61:79)
+    [...] See full stack trace in the browser, or rerun with --verbose.[22m
+[2m21:35:42[22m [34m[200][39m / [2m29ms[22m
+[31m[1m21:35:42[22m [ERROR][39m usd is not defined
+  [1mStack trace:[22m
+[2m    at eval (C:\Users\web\Desktop\llamalaweb.com\src\components\Hero.astro:61:79)
+    [...] See full stack trace in the browser, or rerun with --verbose.[22m
+[2m21:36:20[22m [34m[200][39m / [2m33ms[22m
+[31m[1m21:36:20[22m [ERROR][39m usd is not defined
+  [1mStack trace:[22m
+[2m    at eval (C:\Users\web\Desktop\llamalaweb.com\src\components\Hero.astro:61:79)
+    [...] See full stack trace in the browser, or rerun with --verbose.[22m
+[2m21:36:52[22m [34m[watch][39m /src/styles/global.css
+[2m21:36:52[22m [34m[watch][39m /src/styles/global.css
+[2m21:36:53[22m [34m[200][39m / [2m75ms[22m
+[31m[1m21:36:53[22m [ERROR][39m pen is not defined
+  [1mStack trace:[22m
+[2m    at eval (C:\Users\web\Desktop\llamalaweb.com\src\components\Hero.astro:4:1)
+    [...] See full stack trace in the browser, or rerun with --verbose.[22m
+[2m21:37:07[22m [34m[watch][39m /src/styles/global.css
+[2m21:37:08[22m [34m[200][39m / [2m646ms[22m
+[2m21:37:24[22m [34m[200][39m / [2m6ms[22m
+[2m22:04:13[22m [34m[200][39m / [2m190ms[22m
+[2m22:05:45[22m [34m[watch][39m /src/styles/global.css
+[2m22:05:46[22m [34m[200][39m / [2m78ms[22m
+[2m22:05:49[22m [34m[watch][39m /src/styles/global.css
+[2m22:05:50[22m [34m[200][39m / [2m49ms[22m
+[2m22:06:04[22m [34m[200][39m / [2m5ms[22m
+[2m22:08:25[22m [34m[watch][39m /src/styles/global.css
+[2m22:08:25[22m [34m[watch][39m /src/styles/global.css
+[2m22:08:25[22m [34m[watch][39m /src/styles/global.css
+[2m22:08:27[22m [34m[watch][39m src/components/Contact.astro
+[2m22:08:30[22m [34m[200][39m / [2m1678ms[22m
+[2m22:11:35[22m [34m[200][39m / [2m53ms[22m
+[2m22:11:37[22m [34m[200][39m / [2m9ms[22m
+[2m22:13:07[22m [34m[watch][39m /src/styles/global.css
+[2m22:13:11[22m [34m[watch][39m /src/styles/global.css
+[2m22:13:12[22m [34m[200][39m / [2m158ms[22m
+[2m22:13:12[22m [34m[200][39m / [2m132ms[22m
+[2m22:13:59[22m [34m[200][39m / [2m8ms[22m
+[2m22:14:01[22m [34m[200][39m / [2m4ms[22m
+[2m22:15:32[22m [34m[watch][39m /src/styles/global.css
+[2m22:15:34[22m [34m[200][39m / [2m147ms[22m
+[2m12:53:50[22m [34m[200][39m / [2m5413ms[22m
+[2m12:57:44[22m [34m[watch][39m /src/styles/global.css
+[2m12:57:56[22m [34m[200][39m / [2m317ms[22m
+[2m12:58:29[22m [34m[200][39m / [2m97ms[22m
+[2m12:59:29[22m [34m[200][39m / [2m10ms[22m
+[2m13:02:26[22m [34m[200][39m / [2m414ms[22m

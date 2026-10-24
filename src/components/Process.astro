@@ -1,0 +1,122 @@
+---
+const steps = [
+  {
+    title: "Conversamos",
+    description: "Llamada de 15 min para entender tu negocio y objetivos.",
+    icon: "💬",
+    action: "Paso 1"
+  },
+  {
+    title: "Planificamos",
+    description: "Plan, plazo y precio claros. Definimos estructura y contenido.",
+    icon: "📝",
+    action: "Paso 2"
+  },
+  {
+    title: "Diseñamos y desarrollamos",
+    description: "Creamos el diseño, lo revisas, ajustamos y programamos.",
+    icon: "🎨",
+    action: "Paso 3"
+  },
+  {
+    title: "Lanzamos tu web",
+    description: "Publicamos, conectamos dominio y te damos soporte continuo.",
+    icon: "🚀",
+    action: "Paso 4"
+  },
+];
+---
+
+<section id="proceso" class="scroll-mt-24 border-y-2 border-ink bg-grape-soft/70 py-20 sm:py-24">
+  <div class="container-x">
+    <div class="reveal mx-auto max-w-2xl text-center">
+      <span class="eyebrow">Cómo trabajamos</span>
+      <h2 class="section-title mt-5">De la idea a tu web online en 4 pasos.</h2>
+      <p class="mt-4 text-lg leading-relaxed text-ink/65">
+        Un proceso simple, con fechas claras y sin tecnicismos. Tú apruebas cada etapa.
+      </p>
+    </div>
+
+    <ol class="relative mt-14 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4">
+      <!-- Línea conectora horizontal -->
+      <div aria-hidden="true" class="absolute left-0 right-0 top-8 hidden border-t-2 border-dashed border-ink/25 lg:block"></div>
+
+      {
+        steps.map((step, index) => (
+          <li
+            class="reveal relative h-40"
+            style={`transition-delay: ${index * 70}ms; perspective: 1000px;`}
+          >
+            <div class="flip-card group relative h-full w-full cursor-pointer transition-transform duration-500 [transform-style:preserve-3d] hover:[transform:rotateY(180deg)]">
+              {/* FRENTE de la card */}
+              <div class="flip-card-front absolute inset-0 flex flex-col items-center justify-center rounded-xl border-2 border-ink bg-cream p-4 text-center shadow-pop-sm [backface-visibility:hidden]">
+                {/* Número con icono */}
+                <span class="relative z-10 flex h-12 w-12 items-center justify-center rounded-full border-2 border-ink bg-grape font-display text-base font-black text-white shadow-sm">
+                  {String(index + 1).padStart(2, "0")}
+                </span>
+                
+                <span class="mt-2 text-3xl" role="img" aria-label={step.action}>
+                  {step.icon}
+                </span>
+
+                {/* Título */}
+                <h3 class="mt-2 font-display text-base font-extrabold tracking-tight leading-tight">
+                  {step.title}
+                </h3>
+                
+                {/* Indicador de tap para móvil */}
+                <span class="mt-2 text-xs text-ink/40 lg:hidden">Toca para ver más</span>
+              </div>
+
+              {/* REVERSO de la card */}
+              <div class="flip-card-back absolute inset-0 flex flex-col items-center justify-center rounded-xl border-2 border-ink bg-grape p-4 text-center shadow-pop-sm [backface-visibility:hidden] [transform:rotateY(180deg)]">
+                <span class="text-2xl mb-2" role="img" aria-label={step.action}>
+                  {step.icon}
+                </span>
+                <h3 class="font-display text-sm font-bold text-white mb-2">
+                  {step.title}
+                </h3>
+                <p class="text-xs leading-relaxed text-white/90">
+                  {step.description}
+                </p>
+                
+                {/* Indicador de tap para móvil */}
+                <span class="mt-2 text-xs text-white/60 lg:hidden">Toca para volver</span>
+              </div>
+            </div>
+          </li>
+        ))
+      }
+    </ol>
+    
+    <script>
+      // Funcionalidad táctil para móviles y tablets
+      document.addEventListener('DOMContentLoaded', () => {
+        const flipCards = document.querySelectorAll('.flip-card');
+        
+        flipCards.forEach(card => {
+          let isFlipped = false;
+          
+          card.addEventListener('click', (e) => {
+            // Solo activar en pantallas táctiles o cuando no hay hover
+            if (window.innerWidth < 1024 || 'ontouchstart' in window) {
+              e.preventDefault();
+              isFlipped = !isFlipped;
+              
+              if (isFlipped) {
+                card.style.transform = 'rotateY(180deg)';
+              } else {
+                card.style.transform = 'rotateY(0deg)';
+              }
+            }
+          });
+        });
+      });
+    </script>
+
+    <p class="reveal mt-8 text-center text-sm font-medium text-ink/60">
+      ¿Necesitas algo urgente? Cuéntanos y vemos cómo acelerarlo.
+      <a href="#contacto" class="link-underline font-bold text-ink">Escríbenos</a>
+    </p>
+  </div>
+</section>

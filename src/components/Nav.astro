@@ -1,0 +1,98 @@
+---
+import Logo from "./Logo.astro";
+
+const links = [
+  { href: "#servicios", label: "Servicios" },
+  { href: "#proceso", label: "Proceso" },
+  { href: "#planes", label: "Planes" },
+  { href: "#mantenimiento", label: "Mantenimiento" },
+  { href: "#preguntas", label: "Preguntas" },
+];
+---
+
+<header class="sticky top-0 z-50 border-b-2 border-ink/10 bg-cream/85 backdrop-blur-lg">
+  <div class="container-x flex h-[4.5rem] items-center justify-between gap-4">
+    <Logo imgClass="h-10 w-auto" />
+
+    <nav class="hidden items-center gap-7 lg:flex" aria-label="Navegación principal">
+      {
+        links.map((link) => (
+          <a
+            href={link.href}
+            class="font-display text-sm font-bold text-ink/70 transition-colors hover:text-grape focus-visible:text-grape focus-visible:outline-none"
+          >
+            {link.label}
+          </a>
+        ))
+      }
+    </nav>
+
+    <div class="flex items-center gap-2">
+      <a href="#contacto" class="btn btn-primary btn-sm hidden sm:inline-flex">Quiero mi web</a>
+
+      <button
+        id="menu-btn"
+        type="button"
+        class="inline-flex h-11 w-11 items-center justify-center rounded-full border-2 border-ink bg-white text-ink transition hover:bg-grape-soft focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-grape/30 lg:hidden"
+        aria-controls="mobile-menu"
+        aria-expanded="false"
+        aria-label="Abrir menú"
+      >
+        <svg id="icon-open" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" class="h-5 w-5">
+          <path d="M4 7h16M4 12h16M4 17h16"></path>
+        </svg>
+        <svg id="icon-close" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" class="hidden h-5 w-5">
+          <path d="M6 6l12 12M18 6L6 18"></path>
+        </svg>
+      </button>
+    </div>
+  </div>
+
+  <div id="mobile-menu" class="hidden border-t-2 border-ink/10 bg-cream lg:hidden">
+    <nav class="container-x flex flex-col gap-1 py-4" aria-label="Navegación móvil">
+      {
+        links.map((link) => (
+          <a
+            href={link.href}
+            class="rounded-xl px-3 py-3 font-display text-lg font-bold text-ink hover:bg-grape-soft focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-grape/30"
+          >
+            {link.label}
+          </a>
+        ))
+      }
+      <a href="#contacto" class="btn btn-primary mt-3 w-full">Quiero mi web</a>
+    </nav>
+  </div>
+</header>
+
+<script>
+  const button = document.querySelector<HTMLButtonElement>("#menu-btn");
+  const menu = document.querySelector<HTMLElement>("#mobile-menu");
+  const iconOpen = document.querySelector<SVGElement>("#icon-open");
+  const iconClose = document.querySelector<SVGElement>("#icon-close");
+
+  function setMenu(open: boolean) {
+    if (!button || !menu) return;
+    menu.classList.toggle("hidden", !open);
+    button.setAttribute("aria-expanded", String(open));
+    button.setAttribute("aria-label", open ? "Cerrar menú" : "Abrir menú");
+    iconOpen?.classList.toggle("hidden", open);
+    iconClose?.classList.toggle("hidden", !open);
+  }
+
+  button?.addEventListener("click", () => {
+    setMenu(button.getAttribute("aria-expanded") !== "true");
+  });
+
+  menu?.querySelectorAll("a").forEach((link) => {
+    link.addEventListener("click", () => setMenu(false));
+  });
+
+  document.addEventListener("keydown", (event) => {
+    if (event.key === "Escape") setMenu(false);
+  });
+
+  window.addEventListener("resize", () => {
+    if (window.innerWidth >= 1024) setMenu(false);
+  });
+</script>

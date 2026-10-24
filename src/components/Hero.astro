@@ -1,0 +1,103 @@
+﻿---
+import { usd, webPlans } from "../data/site";
+
+const startingPrice = Math.min(...webPlans.flatMap((plan) => plan.price === null ? [] : [plan.price]));
+---
+
+<section class="relative overflow-hidden pb-16 pt-10 sm:pt-16 lg:pb-24 lg:pt-20">
+  <div aria-hidden="true" class="pointer-events-none absolute inset-0">
+    <div class="absolute -left-40 top-4 h-80 w-80 rounded-full bg-grape/10 blur-3xl"></div>
+    <div class="absolute -right-24 top-0 h-[26rem] w-[26rem] rounded-full bg-sky/25 blur-3xl"></div>
+    <div class="absolute bottom-0 left-1/3 h-64 w-64 rounded-full bg-pink/20 blur-3xl"></div>
+    <svg class="absolute right-[6%] top-24 hidden h-10 w-10 text-grape/60 lg:block" viewBox="0 0 24 24" fill="currentColor">
+      <path d="M12 2l2.2 6.3L21 10l-6.8 1.7L12 18l-2.2-6.3L3 10l6.8-1.7L12 2z"></path>
+    </svg>
+    <svg class="absolute bottom-24 left-[46%] hidden h-6 w-6 text-pink lg:block" viewBox="0 0 24 24" fill="currentColor">
+      <path d="M12 2l2.2 6.3L21 10l-6.8 1.7L12 18l-2.2-6.3L3 10l6.8-1.7L12 2z"></path>
+    </svg>
+  </div>
+
+  <div class="container-x relative grid items-center gap-14 lg:grid-cols-[1.06fr_0.94fr] lg:gap-6">
+    <div class="reveal">
+      <span class="eyebrow text-xs sm:text-[0.75rem]">
+        <span class="inline-block h-2.5 w-2.5 rounded-full bg-grape"></span>
+        <span class="hidden sm:inline">Diseño web para negocios que quieren crecer</span>
+        <span class="sm:hidden">Webs que hacen crecer negocios</span>
+      </span>
+
+      <h1 class="mt-6 font-display text-[2rem] font-black leading-[1.02] tracking-[-0.035em] sm:text-[2.35rem] md:text-5xl lg:text-[4.1rem]">
+        Tu web, lista para{" "}
+        <span class="relative inline-block whitespace-nowrap">
+          <span class="relative z-10">hacer crecer</span>
+          <span aria-hidden="true" class="absolute inset-x-0 bottom-1 -z-0 h-3 -rotate-1 rounded-sm bg-sky sm:bottom-1.5 sm:h-3.5 md:bottom-2 md:h-5"></span>
+        </span>{" "}
+        tu negocio.
+      </h1>
+
+      <p class="mt-5 max-w-xl text-base leading-relaxed text-ink/70 sm:mt-6 sm:text-lg">
+        Diseñamos, lanzamos y cuidamos sitios web rápidos, claros y pensados para convertir visitas en
+        clientes. Tú te enfocas en tu negocio; nosotros en lo digital.
+      </p>
+
+      <div class="mt-8 flex flex-row flex-wrap gap-3 sm:flex-nowrap">
+        <a href="#planes" class="btn btn-primary flex-1 sm:flex-initial">
+          Ver planes y precios
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class="h-5 w-5">
+            <path d="M5 12h14M13 6l6 6-6 6"></path>
+          </svg>
+        </a>
+        <a href="#contacto" class="btn btn-secondary flex-1 sm:flex-initial">Hablemos de tu proyecto</a>
+      </div>
+
+      <p class="mt-4 flex items-center gap-2 text-sm font-medium text-ink/65">
+        <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class="h-4 w-4 text-grape">
+          <path d="M10 2l6 3v5c0 3.5-2.5 6-6 7-3.5-1-6-3.5-6-7V5l6-3z"></path>
+        </svg>
+        Sin compromiso · Respuesta en menos de 24 hr hábiles
+      </p>
+
+      <dl class="mt-9 grid max-w-lg grid-cols-3 gap-3 border-t-2 border-ink/10 pt-6">
+        <div>
+          <dt class="text-[0.7rem] font-bold uppercase tracking-wider text-ink/65">Desde</dt>
+          <dd class="mt-1 font-display text-lg font-extrabold leading-tight">{usd(startingPrice)}</dd>
+        </div>
+        <div class="border-l-2 border-ink/10 pl-4">
+          <dt class="text-[0.7rem] font-bold uppercase tracking-wider text-ink/65">Entrega</dt>
+          <dd class="mt-1 font-display text-lg font-extrabold leading-tight">5–7 días</dd>
+        </div>
+        <div class="border-l-2 border-ink/10 pl-4">
+          <dt class="text-[0.7rem] font-bold uppercase tracking-wider text-ink/65">Permanencia</dt>
+          <dd class="mt-1 font-display text-lg font-extrabold leading-tight">Ninguna</dd>
+        </div>
+      </dl>
+    </div>
+
+    <div class="reveal relative mx-auto w-full max-w-[25rem] sm:max-w-[27rem] lg:max-w-[30rem]">
+      <div aria-hidden="true" class="absolute inset-0 translate-x-3 translate-y-3 rotate-2 rounded-[2.5rem] border-2 border-ink bg-sky"></div>
+      <div aria-hidden="true" class="absolute inset-0 -translate-x-3 translate-y-2 -rotate-2 rounded-[2.5rem] border-2 border-ink bg-pink"></div>
+
+      <div class="relative overflow-hidden rounded-[2.5rem] border-2 border-ink bg-white p-6 shadow-pop-lg sm:p-8">
+        <div aria-hidden="true" class="absolute inset-x-0 top-0 h-28 bg-gradient-to-b from-grape-soft to-transparent"></div>
+        <img
+          src="/images/logo.png"
+          alt="Llama de llamalaweb"
+          width="580"
+          height="814"
+          fetchpriority="high"
+          class="relative mx-auto h-[20rem] w-auto drop-shadow-[0_18px_24px_rgba(139,43,226,0.18)] sm:h-[24rem] lg:h-[26rem]"
+        />
+      </div>
+
+      <div class="float-slow absolute -left-3 top-8 rotate-[-4deg] rounded-2xl border-2 border-ink bg-white px-4 py-3 shadow-pop-sm sm:-left-6">
+        <p class="font-display text-[0.7rem] font-bold uppercase tracking-wider text-ink/65">Incluido</p>
+        <p class="font-display text-sm font-extrabold">Hosting + SSL</p>
+      </div>
+
+      <div class="float-slower absolute -right-2 bottom-10 rotate-[3deg] rounded-2xl border-2 border-ink bg-grape px-4 py-3 text-white shadow-pop-sm sm:-right-5">
+        <p class="font-display text-[0.7rem] font-bold uppercase tracking-wider text-white/90">Plan Express</p>
+        <p class="font-display text-base font-extrabold">Desde {usd(135)}</p>
+      </div>
+    </div>
+  </div>
+</section>
+

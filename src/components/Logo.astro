@@ -1,0 +1,29 @@
+---
+interface Props {
+  class?: string;
+  imgClass?: string;
+  wordmark?: boolean;
+}
+
+const { class: className = "", imgClass = "h-11 w-auto", wordmark = true } = Astro.props;
+---
+
+<a
+  href="/"
+  class:list={["group inline-flex items-center gap-2.5 rounded-full focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-grape/30", className]}
+>
+  <img
+    src="/images/logo-256.png"
+    alt={wordmark ? "" : "LlamaLaWeb"}
+    width="256"
+    height="359"
+    class:list={["shrink-0 transition-transform duration-300 group-hover:-rotate-3", imgClass]}
+  />
+  {
+    wordmark && (
+      <span class="font-display text-xl font-extrabold tracking-tight sm:text-2xl">
+        llamalaweb<span class="text-grape">.com</span>
+      </span>
+    )
+  }
+</a>

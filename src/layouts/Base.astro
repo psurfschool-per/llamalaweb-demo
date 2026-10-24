@@ -1,0 +1,122 @@
+﻿---
+import "../styles/global.css";
+import { site } from "../data/site";
+
+type Props = {
+  title?: string;
+  description?: string;
+};
+
+const {
+  title = "llamalaweb — Webs que hacen crecer tu negocio",
+  description = site.description,
+} = Astro.props;
+
+const siteUrl = Astro.site ?? new URL(site.url);
+const canonical = new URL(Astro.url.pathname, siteUrl);
+const ogImage = new URL("/images/og.png", siteUrl);
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "ProfessionalService",
+  name: "llamalaweb",
+  url: site.url,
+  logo: `${site.url}/images/logo.png`,
+  image: `${site.url}/images/og.png`,
+  email: site.email,
+  description: site.description,
+  priceRange: "Desde S/ 500",
+  areaServed: "Mundo hispanohablante",
+  knowsLanguage: ["es"],
+  hasOfferCatalog: {
+    "@type": "OfferCatalog",
+    name: "Planes de diseño web y mantenimiento",
+    itemListElement: [
+      { "@type": "Offer", name: "Landing Express + Negocio", price: "500", priceCurrency: "PEN" },
+      {
+        "@type": "Offer",
+        name: "Premium",
+        description: "Precio según los requerimientos del proyecto. Contactar para cotización.",
+      },
+      {
+        "@type": "Offer",
+        name: "Mantenimiento Esencial",
+        price: "20",
+        priceCurrency: "USD",
+        description: "Mensual",
+      },
+    ],
+  },
+};
+---
+
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <link rel="canonical" href={canonical} />
+    <meta name="theme-color" content="#8b2be2" />
+    <meta name="robots" content="index, follow" />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="llamalaweb" />
+    <meta property="og:locale" content="es_ES" />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={canonical} />
+    <meta property="og:image" content={ogImage} />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="llamalaweb: webs que hacen crecer negocios" />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={ogImage} />
+
+    <link rel="icon" type="image/png" href="/favicon.png" />
+    <link rel="apple-touch-icon" href="/favicon.png" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+
+    <script is:inline>
+      document.documentElement.classList.add("js");
+    </script>
+
+    <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
+  </head>
+  <body class="bg-cream font-sans text-ink antialiased">
+    <a href="#contenido" class="skip-link">Saltar al contenido</a>
+    <slot />
+
+    <script>
+      const reveals = document.querySelectorAll<HTMLElement>(".reveal");
+
+      if ("IntersectionObserver" in window) {
+        const observer = new IntersectionObserver(
+          (entries) => {
+            for (const entry of entries) {
+              if (entry.isIntersecting) {
+                entry.target.classList.add("is-visible");
+                observer.unobserve(entry.target);
+              }
+            }
+          },
+          { rootMargin: "0px 0px -8% 0px", threshold: 0.08 },
+        );
+
+        reveals.forEach((el) => observer.observe(el));
+      } else {
+        reveals.forEach((el) => el.classList.add("is-visible"));
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,24 @@
+---
+import Check from "./Check.astro";
+
+const items = [
+  "Diseño a medida",
+  "100% adaptable",
+  "SEO incluido",
+  "Hosting + SSL",
+  "Soporte humano",
+];
+---
+
+<section class="border-y-2 border-ink bg-ink py-4 text-cream" aria-label="Lo que incluye trabajar con llamalaweb">
+  <div class="container-x flex flex-wrap items-center justify-center gap-x-8 gap-y-3">
+    {
+      items.map((item) => (
+        <span class="inline-flex items-center gap-2 font-display text-sm font-bold">
+          <Check class="h-4 w-4 text-sky" />
+          {item}
+        </span>
+      ))
+    }
+  </div>
+</section>
