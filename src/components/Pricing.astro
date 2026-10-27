@@ -14,13 +14,13 @@ import { usd, webPlans } from "../data/site";
     </div>
 
     <!-- Contenedor con scroll horizontal en móvil -->
-    <div class="mt-14 overflow-x-auto -mx-4 px-4 lg:mx-0 lg:px-0 lg:overflow-visible pt-6 lg:pt-0">
+    <div class="mt-14 overflow-x-auto -mx-4 px-4 lg:mx-0 lg:px-0 lg:overflow-visible">
       <div class="flex gap-5 lg:grid lg:grid-cols-2 lg:items-stretch">
         {
           webPlans.map((plan, index) => (
             <article
               class:list={[
-                "reveal relative flex flex-col rounded-[2rem] border-2 border-ink p-5 sm:p-6 w-[82%] sm:w-[85%] lg:w-auto lg:p-7 flex-shrink-0 mt-6 lg:mt-0",
+                "reveal relative flex flex-col rounded-[2rem] border-2 border-ink p-5 sm:p-6 w-[82%] sm:w-[85%] lg:w-auto lg:p-7 flex-shrink-0 overflow-visible",
                 plan.highlighted
                   ? "bg-ink text-cream shadow-pop lg:-translate-y-3"
                   : "bg-white text-ink shadow-pop-sm transition duration-200 hover:-translate-y-1 hover:shadow-pop",
@@ -28,7 +28,7 @@ import { usd, webPlans } from "../data/site";
               style={`transition-delay: ${index * 70}ms`}
             >
               {plan.badge && (
-                <span class="absolute -top-5 left-1/2 -translate-x-1/2 whitespace-nowrap rounded-full border-2 border-ink bg-pink px-3 py-1 font-display text-[0.65rem] sm:text-[0.7rem] font-bold uppercase tracking-wider text-ink">
+                <span class="mb-3 self-center rounded-full border-2 border-ink bg-pink px-3 py-1 font-display text-[0.65rem] sm:text-[0.7rem] font-bold uppercase tracking-wider text-ink lg:absolute lg:-top-4 lg:left-1/2 lg:-translate-x-1/2 lg:mb-0">
                   {plan.badge}
                 </span>
               )}
