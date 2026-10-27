@@ -25,7 +25,7 @@ export const webPlans: Plan[] = [
   {
     name: "Landing Express",
     price: 135,
-    tagline: "Una página potente para presentar tu marca y captar clientes.",
+    tagline: "Tu página web profesional para mostrar tu negocio y atraer clientes.",
     delivery: "Entrega en 5–7 días",
     features: [
       "Página única optimizada",
