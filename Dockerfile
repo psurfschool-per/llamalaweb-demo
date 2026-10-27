@@ -10,6 +10,9 @@ COPY . .
 
 RUN npm run build
 
-EXPOSE 4321
+ENV HOST=0.0.0.0
+ENV PORT=3000
 
-CMD ["npm", "run", "preview"]
+EXPOSE 3000
+
+CMD ["sh", "-c", "npm run preview -- --port $PORT"]
