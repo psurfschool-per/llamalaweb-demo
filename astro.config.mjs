@@ -8,7 +8,7 @@ export default defineConfig({
   vite: {
     plugins: [tailwindcss()],
     preview: {
-      allowedHosts: [".railway.app", "localhost"]
+      allowedHosts: ["localhost", ".railway.app", "llamalaweb.com", "www.llamalaweb.com"]
     }
   },
 });
