@@ -1,6 +1,7 @@
 ---
 import Check from "./Check.astro";
-import { maintenancePlans, site, webPlans } from "../data/site";
+import WhatsAppIcon from "./WhatsAppIcon.astro";
+import { maintenancePlans, site, waLink, waMessage, webPlans } from "../data/site";
 
 const planOptions = [
   ...webPlans.map((plan) => plan.name),
@@ -48,8 +49,17 @@ const planOptions = [
       <div class="mt-10 rounded-2xl border-2 border-white/20 bg-white/10 p-5">
         <p class="font-display text-xs font-bold uppercase tracking-wider text-white">Escríbenos directo</p>
         <a
+          href={waLink(waMessage)}
+          target="_blank"
+          rel="noopener noreferrer"
+          class="mt-2 inline-flex items-center gap-2.5 rounded-full border-2 border-white/25 bg-white/10 px-4 py-2 font-display font-extrabold text-white transition hover:bg-white/20 focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-white/30"
+        >
+          <WhatsAppIcon class="h-5 w-5" />
+          {site.whatsappLabel}
+        </a>
+        <a
           href={`mailto:${site.email}`}
-          class="mt-1 inline-block font-display text-xl font-extrabold text-white underline decoration-sky decoration-2 underline-offset-4 hover:decoration-4 sm:text-2xl"
+          class="mt-3 block font-display font-bold text-white underline decoration-sky decoration-2 underline-offset-4 hover:decoration-4"
         >
           {site.email}
         </a>
@@ -132,7 +142,7 @@ const planOptions = [
     if (!form.reportValidity()) return;
 
     const data = new FormData(form);
-    const email = form.dataset.email ?? "hola@llamalaweb.com";
+    const email = form.dataset.email ?? "hola.llamalaweb@gmail.com";
     const plan = String(data.get("plan") || "Plan por definir");
     const subject = `Nueva solicitud web — ${plan}`;
 

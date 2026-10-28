@@ -1,5 +1,6 @@
 ﻿---
 import "../styles/global.css";
+import WhatsAppButton from "../components/WhatsAppButton.astro";
 import { site } from "../data/site";
 
 type Props = {
@@ -24,6 +25,7 @@ const jsonLd = {
   logo: `${site.url}/images/logo.png`,
   image: `${site.url}/images/og.png`,
   email: site.email,
+  telephone: site.whatsappLabel,
   description: site.description,
   priceRange: "Desde S/ 500",
   areaServed: "Mundo hispanohablante",
@@ -96,6 +98,7 @@ const jsonLd = {
   <body class="bg-cream font-sans text-ink antialiased">
     <a href="#contenido" class="skip-link">Saltar al contenido</a>
     <slot />
+    <WhatsAppButton />
 
     <script>
       const reveals = document.querySelectorAll<HTMLElement>(".reveal");

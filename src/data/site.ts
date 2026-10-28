@@ -1,9 +1,16 @@
 ﻿export const site = {
   url: "https://llamalaweb.com",
-  email: "hola@llamalaweb.com",
+  email: "hola.llamalaweb@gmail.com",
+  whatsapp: "51979359261",
+  whatsappLabel: "+51 979 359 261",
   description:
     "Diseño y desarrollo de sitios web para negocios que quieren crecer: planes desde $135 y hosting con seguimiento desde $20/mes. Sin permanencia.",
 };
+
+export const waLink = (message: string) =>
+  `https://wa.me/${site.whatsapp}?text=${encodeURIComponent(message)}`;
+
+export const waMessage = "¡Hola llamalaweb! Me interesa una web para mi negocio. ¿Podemos conversar?";
 
 export const usd = (value: number) => `$${value.toLocaleString("en-US")}`;
 

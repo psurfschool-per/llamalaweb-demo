@@ -1,6 +1,7 @@
 ---
 import Logo from "./Logo.astro";
-import { site } from "../data/site";
+import WhatsAppIcon from "./WhatsAppIcon.astro";
+import { site, waLink, waMessage } from "../data/site";
 
 const year = new Date().getFullYear();
 
@@ -23,8 +24,17 @@ const links = [
           permanencia y con soporte humano.
         </p>
         <a
-          href={`mailto:${site.email}`}
+          href={waLink(waMessage)}
+          target="_blank"
+          rel="noopener noreferrer"
           class="mt-5 inline-flex items-center gap-2 font-display font-bold text-sky underline decoration-2 underline-offset-4 hover:decoration-4"
+        >
+          <WhatsAppIcon class="h-4 w-4" />
+          {site.whatsappLabel}
+        </a>
+        <a
+          href={`mailto:${site.email}`}
+          class="mt-2 inline-flex items-center gap-2 font-display font-bold text-cream/75 underline decoration-cream/30 decoration-2 underline-offset-4 hover:text-white hover:decoration-4"
         >
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class="h-4 w-4">
             <rect x="3" y="5" width="18" height="14" rx="2" />
