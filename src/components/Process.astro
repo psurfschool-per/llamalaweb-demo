@@ -92,7 +92,7 @@ const steps = [
     <script>
       // Funcionalidad táctil para móviles y tablets
       document.addEventListener('DOMContentLoaded', () => {
-        const flipCards = document.querySelectorAll('.flip-card');
+        const flipCards = document.querySelectorAll<HTMLElement>('.flip-card');
         
         flipCards.forEach(card => {
           let isFlipped = false;

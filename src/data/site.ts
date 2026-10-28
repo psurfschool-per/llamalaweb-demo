@@ -1,17 +1,13 @@
 ﻿export const site = {
-  name: "llamalaweb",
-  domain: "llamalaweb.com",
   url: "https://llamalaweb.com",
   email: "hola@llamalaweb.com",
-  tagline: "Webs que hacen crecer negocios.",
   description:
     "Diseño y desarrollo de sitios web para negocios que quieren crecer: planes desde $135 y hosting con seguimiento desde $20/mes. Sin permanencia.",
 };
 
-export const pen = (value: number) => `S/ ${value.toLocaleString("en-US")}`;
 export const usd = (value: number) => `$${value.toLocaleString("en-US")}`;
 
-export type Plan = {
+type Plan = {
   name: string;
   price: number | null;
   tagline: string;
@@ -54,7 +50,7 @@ export const webPlans: Plan[] = [
   },
 ];
 
-export type MaintenancePlan = {
+type MaintenancePlan = {
   name: string;
   price: number;
   summary: string;
