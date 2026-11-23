@@ -5,8 +5,8 @@
   whatsappLabel: "+51 915 168 620",
   description:
     "Diseño y desarrollo de sitios web para negocios que quieren crecer: planes desde $135 y hosting con seguimiento desde $20/mes. Sin permanencia.",
-  // Pega aquí el código de verificación de Google Search Console (meta tag) cuando lo tengas.
-  googleSiteVerification: "",
+  // Código de verificación de Google Search Console (meta tag).
+  googleSiteVerification: "lsqkhyaar7quUXfruB7ggRN3zgpu9aWrEi0SB_mVlBo",
 };
 
 export const waLink = (message: string) =>
