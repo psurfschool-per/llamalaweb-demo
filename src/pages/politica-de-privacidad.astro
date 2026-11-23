@@ -1,0 +1,91 @@
+---
+import Legal from "../layouts/Legal.astro";
+import { site } from "../data/site";
+---
+
+<Legal
+  title="Política de Privacidad"
+  description="Cómo llamalaweb recopila, usa y protege tus datos personales: qué información recogemos, con quién la compartimos y cuáles son tus derechos."
+>
+  <p>
+    En <strong>llamalaweb</strong> tratamos los datos personales con seriedad y transparencia. Esta
+    política explica qué información recogemos, para qué la usamos y qué derechos tienes sobre ella,
+    conforme a la Ley N.º 29733, Ley de Protección de Datos Personales de Perú, y su reglamento.
+  </p>
+
+  <h2>1. Responsable del tratamiento</h2>
+  <p>
+    llamalaweb — servicio de diseño, desarrollo y mantenimiento de sitios web, con atención 100%
+    remota desde Lima, Perú.<br />
+    Email: <a href={`mailto:${site.email}`}>{site.email}</a> · WhatsApp: {site.whatsappLabel}
+  </p>
+
+  <h2>2. Datos que recopilamos</h2>
+  <ul>
+    <li><strong>Del formulario de contacto:</strong> nombre, email, nombre del negocio, plan de interés y el mensaje que nos escribas.</li>
+    <li><strong>De WhatsApp o email:</strong> los datos que nos envíes voluntariamente en la conversación (nombre, teléfono, archivos, referencias del proyecto).</li>
+    <li><strong>Del libro de reclamaciones:</strong> los datos necesarios para registrar y atender tu reclamo o queja.</li>
+    <li><strong>Datos técnicos mínimos:</strong> información que genera tu navegador al visitar el sitio (por ejemplo, tipo de dispositivo o navegador) y, si estuvieran activadas, métricas agregadas de analítica.</li>
+  </ul>
+  <p>No recopilamos datos sensibles (salud, biometría, creencias, etc.) ni datos de menores de edad de forma deliberada.</p>
+
+  <h2>3. Finalidades del tratamiento</h2>
+  <ul>
+    <li>Responder tus consultas y enviarte propuestas o cotizaciones.</li>
+    <li>Ejecutar y dar seguimiento a los proyectos y mantenimientos contratados.</li>
+    <li>Facturar, emitir comprobantes y cumplir obligaciones contables y legales.</li>
+    <li>Atender reclamos, quejas y ejercicios de derechos.</li>
+    <li>Mejorar nuestro sitio y servicios mediante métricas agregadas.</li>
+  </ul>
+
+  <h2>4. Base legal</h2>
+  <p>
+    Tratamos tus datos con tu <strong>consentimiento</strong> (al enviar un formulario o escribirnos),
+    para la <strong>ejecución del contrato</strong> cuando contratas un servicio, y para el
+    <strong>cumplimiento de obligaciones legales</strong> que nos aplican.
+  </p>
+
+  <h2>5. Con quién compartimos tus datos</h2>
+  <p>No vendemos ni alquilamos tus datos. Solo los compartimos con proveedores necesarios para operar:</p>
+  <ul>
+    <li><strong>Proveedores de email y hosting</strong> que alojan este sitio y reciben los mensajes del formulario.</li>
+    <li><strong>WhatsApp (Meta)</strong> cuando eliges escribirnos o confirmar reservas por ese canal, bajo sus propias políticas.</li>
+    <li><strong>Herramientas de analítica</strong> con datos agregados y, en lo posible, anonimizados.</li>
+    <li><strong>Autoridades</strong> cuando una norma nos obligue a entregarlos.</li>
+  </ul>
+
+  <h2>6. Conservación de los datos</h2>
+  <ul>
+    <li>Las conversaciones comerciales se conservan mientras dure la relación y hasta 12 meses después, por respaldo y garantía.</li>
+    <li>Los datos de proyectos contratados y comprobantes se conservan según los plazos contables y legales aplicables.</li>
+    <li>Los registros del libro de reclamaciones se conservan según la normativa de consumo vigente.</li>
+  </ul>
+
+  <h2>7. Tus derechos (ARCO)</h2>
+  <p>
+    Puedes ejercer los derechos de <strong>Acceso, Rectificación, Cancelación y Oposición</strong>
+    escribiéndonos a <a href={`mailto:${site.email}`}>{site.email}</a> con el asunto
+    "Protección de datos". Atenderemos tu solicitud en un plazo máximo de 10 días hábiles, conforme a ley.
+  </p>
+
+  <h2>8. Seguridad</h2>
+  <p>
+    Aplicamos medidas razonables: este sitio sirve todo su tráfico por HTTPS, limitamos el acceso a la
+    información a quienes la necesitan para trabajar y usamos servicios reconocidos para correo y
+    hosting. Ningún sistema es infalible; por eso no pedimos contraseñas ni datos de tarjetas por
+    formulario o chat.
+  </p>
+
+  <h2>9. Enlaces a otros sitios</h2>
+  <p>
+    Nuestro sitio y portafolio incluyen enlaces a sitios de terceros (por ejemplo, webs de clientes o
+    redes sociales). No controlamos ni respondemos por sus prácticas de privacidad; te recomendamos
+    revisar sus políticas.
+  </p>
+
+  <h2>10. Cambios en esta política</h2>
+  <p>
+    Si actualizamos esta política, publicaremos la nueva versión en esta página con su fecha de
+    actualización. Los cambios sustanciales te los comunicaremos por email cuando exista una relación contractual activa.
+  </p>
+</Legal>

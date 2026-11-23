@@ -27,6 +27,7 @@ const jsonLd = {
   email: site.email,
   telephone: site.whatsappLabel,
   description: site.description,
+  address: { "@type": "PostalAddress", addressLocality: "Lima", addressCountry: "PE" },
   priceRange: "Desde S/ 500",
   areaServed: "Mundo hispanohablante",
   knowsLanguage: ["es"],
@@ -50,6 +51,19 @@ const jsonLd = {
     ],
   },
 };
+
+const webSiteLd = {
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  name: "llamalaweb",
+  url: site.url,
+  inLanguage: "es",
+  publisher: {
+    "@type": "Organization",
+    name: "llamalaweb",
+    logo: { "@type": "ImageObject", url: `${site.url}/images/logo.png` },
+  },
+};
 ---
 
 <!doctype html>
@@ -62,6 +76,9 @@ const jsonLd = {
     <link rel="canonical" href={canonical} />
     <meta name="theme-color" content="#8b2be2" />
     <meta name="robots" content="index, follow" />
+    {site.googleSiteVerification && (
+      <meta name="google-site-verification" content={site.googleSiteVerification} />
+    )}
 
     <meta property="og:type" content="website" />
     <meta property="og:site_name" content="llamalaweb" />
@@ -94,6 +111,7 @@ const jsonLd = {
     </script>
 
     <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
+    <script type="application/ld+json" set:html={JSON.stringify(webSiteLd)} />
   </head>
   <body class="bg-cream font-sans text-ink antialiased">
     <a href="#contenido" class="skip-link">Saltar al contenido</a>

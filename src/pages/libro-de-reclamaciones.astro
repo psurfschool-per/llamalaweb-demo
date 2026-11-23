@@ -1,0 +1,154 @@
+---
+import Legal from "../layouts/Legal.astro";
+import { site } from "../data/site";
+---
+
+<Legal
+  title="Libro de Reclamaciones"
+  description="Canal oficial de reclamos y quejas de llamalaweb conforme al Código de Protección y Defensa del Consumidor (Ley N.º 29571) de Perú."
+>
+  <div class="rounded-[1.75rem] border-2 border-ink bg-white p-6 shadow-pop-sm sm:p-8">
+    <p class="font-display text-xs font-bold uppercase tracking-[0.16em] text-ink/50">
+      Decreto Supremo N.º 011-2011-PCM · Ley N.º 29571
+    </p>
+    <h2 class="mt-2 !mt-2 font-display text-2xl font-extrabold tracking-tight">
+      Libro de Reclamaciones virtual
+    </h2>
+    <p>
+      Conforme al <strong>Código de Protección y Defensa del Consumidor</strong>, ponemos a tu
+      disposición este libro virtual para registrar reclamos o quejas sobre nuestros servicios.
+      También puedes ejercer este derecho escribiendo a
+      <a href={`mailto:${site.email}`}>{site.email}</a> o por WhatsApp al {site.whatsappLabel}.
+    </p>
+
+    <h3>¿Reclamo o queja?</h3>
+    <ul>
+      <li><strong>Reclamo:</strong> disconformidad relacionada con el servicio contratado (incumplimiento, defectos, demoras).</li>
+      <li><strong>Queja:</strong> malestar o desagrado con la atención o el trato recibido, sin necesidad de que exista un incumplimiento.</li>
+    </ul>
+
+    <h3>Datos del prestador</h3>
+    <ul>
+      <li><strong>Razón comercial:</strong> llamalaweb</li>
+      <li><strong>Domicilio:</strong> Lima, Perú (atención 100% remota)</li>
+      <li><strong>Email:</strong> {site.email}</li>
+      <li><strong>WhatsApp:</strong> {site.whatsappLabel}</li>
+    </ul>
+
+    <p>
+      Los <strong>reclamos</strong> serán atendidos en un plazo máximo de <strong>15 días hábiles</strong>
+      desde su registro. Si no obtienes una respuesta satisfactoria, puedes acudir a
+      <strong>Indecopi</strong>, autoridad de protección del consumidor:
+      <a href="https://www.gob.pe/indecopi" target="_blank" rel="noopener noreferrer">www.gob.pe/indecopi</a>.
+    </p>
+  </div>
+
+  <h2>Registrar un reclamo o queja</h2>
+  <p>
+    Completa el formulario y se abrirá tu aplicación de correo con el registro listo para enviar.
+    Guardaremos una copia en nuestro libro de reclamaciones y te responderemos dentro del plazo legal.
+  </p>
+
+  <form
+    id="libro-form"
+    class="mt-6 rounded-[1.75rem] border-2 border-ink bg-white p-6 shadow-pop-sm sm:p-8"
+    data-email={site.email}
+  >
+    <div class="grid gap-4 sm:grid-cols-2">
+      <div class="flex flex-col gap-1.5">
+        <label for="lr-nombres" class="font-display text-sm font-bold">Nombres y apellidos *</label>
+        <input id="lr-nombres" name="nombres" type="text" required autocomplete="name" placeholder="Tu nombre completo" class="field" />
+      </div>
+      <div class="flex flex-col gap-1.5">
+        <label for="lr-doc" class="font-display text-sm font-bold">DNI / CE *</label>
+        <input id="lr-doc" name="documento" type="text" required placeholder="Número de documento" class="field" />
+      </div>
+    </div>
+
+    <div class="mt-4 grid gap-4 sm:grid-cols-2">
+      <div class="flex flex-col gap-1.5">
+        <label for="lr-email" class="font-display text-sm font-bold">Email *</label>
+        <input id="lr-email" name="email" type="email" required autocomplete="email" placeholder="tu@email.com" class="field" />
+      </div>
+      <div class="flex flex-col gap-1.5">
+        <label for="lr-tel" class="font-display text-sm font-bold">Teléfono / WhatsApp *</label>
+        <input id="lr-tel" name="telefono" type="tel" required autocomplete="tel" placeholder="+51 ..." class="field" />
+      </div>
+    </div>
+
+    <div class="mt-4 grid gap-4 sm:grid-cols-2">
+      <div class="flex flex-col gap-1.5">
+        <label for="lr-tipo" class="font-display text-sm font-bold">Tipo de registro *</label>
+        <select id="lr-tipo" name="tipo" required class="field">
+          <option value="Reclamo">Reclamo</option>
+          <option value="Queja">Queja</option>
+        </select>
+      </div>
+      <div class="flex flex-col gap-1.5">
+        <label for="lr-servicio" class="font-display text-sm font-bold">Servicio contratado *</label>
+        <select id="lr-servicio" name="servicio" required class="field">
+          <option value="">Selecciona…</option>
+          <option value="Diseño y desarrollo web">Diseño y desarrollo web</option>
+          <option value="Mantenimiento y hosting">Mantenimiento y hosting</option>
+          <option value="Otro">Otro</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="mt-4 flex flex-col gap-1.5">
+      <label for="lr-fecha" class="font-display text-sm font-bold">Fecha de contratación o del hecho *</label>
+      <input id="lr-fecha" name="fecha" type="date" required class="field" />
+    </div>
+
+    <div class="mt-4 flex flex-col gap-1.5">
+      <label for="lr-detalle" class="font-display text-sm font-bold">Detalle del reclamo o queja *</label>
+      <textarea id="lr-detalle" name="detalle" rows="4" required placeholder="Describe lo sucedido con el mayor detalle posible." class="field resize-y"></textarea>
+    </div>
+
+    <div class="mt-4 flex flex-col gap-1.5">
+      <label for="lr-pedido" class="font-display text-sm font-bold">Pedido concreto *</label>
+      <textarea id="lr-pedido" name="pedido" rows="2" required placeholder="¿Qué solución esperas? (reembolso, corrección, disculpas, etc.)" class="field resize-y"></textarea>
+    </div>
+
+    <button type="submit" class="btn btn-primary mt-6 w-full">Enviar al libro de reclamaciones</button>
+
+    <p class="mt-3 text-center text-xs leading-relaxed text-ink/65">
+      Al enviar se abrirá tu aplicación de correo con el registro listo. También puedes escribirnos a
+      <a href={`mailto:${site.email}`} class="font-semibold text-ink/70 underline">{site.email}</a>.
+    </p>
+  </form>
+</Legal>
+
+<script>
+  const form = document.querySelector<HTMLFormElement>("#libro-form");
+
+  form?.addEventListener("submit", (event) => {
+    event.preventDefault();
+    if (!form.reportValidity()) return;
+
+    const data = new FormData(form);
+    const email = form.dataset.email ?? "hola.llamalaweb@gmail.com";
+    const tipo = String(data.get("tipo") ?? "Reclamo");
+    const subject = `Libro de Reclamaciones — ${tipo}`;
+
+    const body = [
+      "LIBRO DE RECLAMACIONES — llamalaweb",
+      "",
+      `Nombres y apellidos: ${data.get("nombres") ?? ""}`,
+      `DNI / CE: ${data.get("documento") ?? ""}`,
+      `Email: ${data.get("email") ?? ""}`,
+      `Teléfono: ${data.get("telefono") ?? ""}`,
+      `Tipo: ${tipo}`,
+      `Servicio contratado: ${data.get("servicio") ?? ""}`,
+      `Fecha del hecho: ${data.get("fecha") ?? ""}`,
+      "",
+      "Detalle:",
+      String(data.get("detalle") ?? ""),
+      "",
+      "Pedido:",
+      String(data.get("pedido") ?? ""),
+    ].join("\n");
+
+    window.location.href = `mailto:${email}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+  });
+</script>

@@ -1,0 +1,54 @@
+---
+import Base from "./Base.astro";
+import Nav from "../components/Nav.astro";
+import Footer from "../components/Footer.astro";
+import { site } from "../data/site";
+
+type Props = {
+  title: string;
+  description: string;
+  updated?: string;
+};
+
+const { title, description, updated = "22 de noviembre de 2026" } = Astro.props;
+
+const breadcrumbLd = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: [
+    { "@type": "ListItem", position: 1, name: "Inicio", item: site.url },
+    { "@type": "ListItem", position: 2, name: title, item: new URL(Astro.url.pathname, site.url).href },
+  ],
+};
+---
+
+<Base title={`${title} — llamalaweb`} description={description}>
+  <Nav />
+  <main id="contenido">
+    <div class="container-x py-16 sm:py-20">
+      <a
+        href="/"
+        class="inline-flex items-center gap-1.5 font-display text-sm font-bold text-grape hover:underline"
+      >
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class="h-4 w-4">
+          <path d="M19 12H5M11 18l-6-6 6-6" />
+        </svg>
+        Volver al inicio
+      </a>
+
+      <div class="reveal mt-8 max-w-3xl">
+        <span class="eyebrow">Legal</span>
+        <h1 class="section-title mt-5">{title}</h1>
+        <p class="mt-4 text-xs font-semibold uppercase tracking-[0.14em] text-ink/45">
+          Última actualización: {updated}
+        </p>
+      </div>
+
+      <div class="legal-body reveal mt-10 max-w-3xl">
+        <slot />
+      </div>
+    </div>
+  </main>
+  <Footer />
+  <script type="application/ld+json" set:html={JSON.stringify(breadcrumbLd)} />
+</Base>

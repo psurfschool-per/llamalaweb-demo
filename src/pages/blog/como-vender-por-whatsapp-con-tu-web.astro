@@ -1,0 +1,73 @@
+---
+import BlogPost from "../../layouts/BlogPost.astro";
+import { getPost } from "../../data/blog";
+
+const post = getPost("como-vender-por-whatsapp-con-tu-web")!;
+---
+
+<BlogPost post={post}>
+  <p>
+    En Perú, WhatsApp no es un complemento: es el canal donde se cierran la mayoría de las ventas de
+    negocios locales. Una web que ignora eso desperdicia visitas; una web que termina cada recorrido
+    en una conversación de WhatsApp convierte. Te contamos las 5 integraciones que usamos en los
+    proyectos de llamalaweb, con ejemplos reales de nuestro portafolio.
+  </p>
+
+  <h2>Por qué tu web debe terminar en WhatsApp</h2>
+  <ul>
+    <li><strong>Es donde ya está tu cliente:</strong> no hay que descargar nada ni crear cuentas.</li>
+    <li><strong>Da confianza:</strong> la gente prefiere preguntar a una persona antes que llenar formularios largos.</li>
+    <li><strong>Acelera la decisión:</strong> una respuesta rápida a tiempo cierra ventas que un email pierde.</li>
+    <li><strong>Costo cero:</strong> no pagas por clic ni por contacto, a diferencia de la publicidad.</li>
+  </ul>
+
+  <h2>5 formas de integrar WhatsApp en tu sitio</h2>
+  <h3>1. Botón flotante siempre visible</h3>
+  <p>
+    Un botón fijo en la esquina que abre el chat desde cualquier punto del sitio. Simple y efectivo:
+    el cliente nunca tiene que buscar cómo contactarte.
+  </p>
+  <h3>2. Enlaces con mensaje prellenado</h3>
+  <p>
+    Cada botón o enlace puede abrir WhatsApp con un texto ya escrito según el contexto:
+    "Hola, quiero reservar una clase grupal" o "Me interesa el plan de mantenimiento". Tú recibes el
+    pedido ordenado y el cliente no tiene que pensar qué escribir.
+  </p>
+  <h3>3. Formularios que abren el chat</h3>
+  <p>
+    El visitante completa sus datos una vez y, al enviar, se abre WhatsApp con todo el resumen listo.
+    Combina lo mejor de un formulario (datos completos) con lo mejor del chat (inmediatez).
+  </p>
+  <h3>4. Catálogos y reservas conectados al chat</h3>
+  <p>
+    Productos, paquetes o propiedades con botón "Consultar" por ítem: el cliente pregunta justo por lo
+    que está viendo, y tú sabes exactamente de qué habla.
+  </p>
+  <h3>5. Clic para llamar y horarios claros</h3>
+  <p>
+    Teléfono tocable y horarios visibles evitan mensajes a deshora y generan expectativas realistas de
+    respuesta.
+  </p>
+
+  <h2>Ejemplos reales de nuestro portafolio</h2>
+  <ul>
+    <li><strong><a href="https://camdenperu.com" target="_blank" rel="noopener noreferrer">Camden Peru</a>:</strong> tienda de ponchos con carrito y botón de ayuda por WhatsApp para resolver dudas de tallas y envíos.</li>
+    <li><strong><a href="https://pacificsurfschool.com.pe" target="_blank" rel="noopener noreferrer">Pacific Surf School</a>:</strong> reservas de clases en 4 pasos que terminan confirmando por WhatsApp, con pago coordinado por Yape o Plin.</li>
+    <li><strong><a href="https://www.bhinmobiliaria.pe" target="_blank" rel="noopener noreferrer">BH Inmobiliaria</a>:</strong> catálogo con filtros donde cada propiedad tiene "Consultar" y la valoración gratuita arma el mensaje con los datos del propietario.</li>
+    <li><strong><a href="https://huarcosurf.com" target="_blank" rel="noopener noreferrer">Huarco Surf</a>:</strong> cada servicio (principiantes, avanzado, niños) tiene su enlace de consulta con texto prellenado.</li>
+  </ul>
+
+  <h2>Buenas prácticas para no quemar el canal</h2>
+  <ul>
+    <li>Responde rápido en horario definido; la velocidad es parte de la venta.</li>
+    <li>Usa mensajes prellenados distintos por sección para recibir contexto, no solo "hola".</li>
+    <li>No hagas spam: WhatsApp es para responder y cerrar, no para bombardear promociones.</li>
+    <li>Guarda etiquetas o listas de difusión para clientes que sí aceptaron recibir novedades.</li>
+  </ul>
+
+  <p>
+    ¿Quieres que tu web convierta visitas en conversaciones de WhatsApp? Así trabajamos todos
+    nuestros proyectos: <a href="/#portafolio">mira el portafolio</a> y
+    <a href="/#contacto">cuéntanos tu caso</a>.
+  </p>
+</BlogPost>

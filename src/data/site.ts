@@ -1,10 +1,12 @@
 ﻿export const site = {
   url: "https://llamalaweb.com",
   email: "hola.llamalaweb@gmail.com",
-  whatsapp: "51979359261",
-  whatsappLabel: "+51 979 359 261",
+  whatsapp: "51915168620",
+  whatsappLabel: "+51 915 168 620",
   description:
     "Diseño y desarrollo de sitios web para negocios que quieren crecer: planes desde $135 y hosting con seguimiento desde $20/mes. Sin permanencia.",
+  // Pega aquí el código de verificación de Google Search Console (meta tag) cuando lo tengas.
+  googleSiteVerification: "",
 };
 
 export const waLink = (message: string) =>
@@ -105,6 +107,64 @@ export const maintenancePlans: MaintenancePlan[] = [
       "Landing pages para campañas",
       "Soporte por WhatsApp (mismo día)",
     ],
+  },
+];
+
+type Project = {
+  name: string;
+  url: string;
+  slug: string;
+  image: string;
+  category: string;
+  description: string;
+  tags: string[];
+  tile: string;
+};
+
+export const portfolio: Project[] = [
+  {
+    name: "Camden Peru",
+    url: "https://camdenperu.com",
+    slug: "camden-peru",
+    image: "/images/portafolio/camden-peru.jpg",
+    category: "Tienda online",
+    description:
+      "Ponchos cambiadores premium 100% peruanos. Tienda con catálogo para adultos y niños, carrito de compras, guía de tallas y atención directa por WhatsApp.",
+    tags: ["E-commerce", "Carrito de compras", "Envíos a todo el país"],
+    tile: "bg-sky",
+  },
+  {
+    name: "Pacific Surf School",
+    url: "https://pacificsurfschool.com.pe",
+    slug: "pacific-surf-school",
+    image: "/images/portafolio/pacific-surf-school.jpg",
+    category: "Servicio deportivo",
+    description:
+      "Clases de surf en Playa Barranquito, Costa Verde. Reservas online en 4 pasos con pago por Yape o Plin, pronóstico de oleaje en vivo y sitio en 3 idiomas.",
+    tags: ["Reservas online", "Multiidioma ES/EN/DE", "Pronóstico de olas"],
+    tile: "bg-peri",
+  },
+  {
+    name: "BH Inmobiliaria",
+    url: "https://www.bhinmobiliaria.pe",
+    slug: "bh-inmobiliaria",
+    image: "/images/portafolio/bh-inmobiliaria.jpg",
+    category: "Inmobiliaria",
+    description:
+      "Venta y alquiler de casas, departamentos, terrenos y locales en Lima. Catálogo con filtros por tipo y operación, y formulario de valoración gratuita que arma el WhatsApp.",
+    tags: ["Catálogo con filtros", "Valoración gratuita", "Leads por WhatsApp"],
+    tile: "bg-pink",
+  },
+  {
+    name: "Huarco Surf",
+    url: "https://huarcosurf.com",
+    slug: "huarco-surf",
+    image: "/images/portafolio/huarco-surf.jpg",
+    category: "Escuela de surf",
+    description:
+      "Escuela de surf en Cerro Azul, Cañete. Línea de tiempo con su historia y logros ISA, servicios por nivel, FAQ y reservas por WhatsApp con ubicación en Maps.",
+    tags: ["Historia de marca", "Reservas por WhatsApp", "Google Maps"],
+    tile: "bg-grape-soft",
   },
 ];
 

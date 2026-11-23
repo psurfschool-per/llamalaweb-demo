@@ -77,6 +77,34 @@ body {
   .field {
     @apply w-full rounded-xl border-2 border-ink bg-white px-4 py-3 font-medium text-ink placeholder:text-ink/35 focus:outline-none focus:ring-4 focus:ring-grape/25;
   }
+
+  .legal-body h2 {
+    @apply mt-10 font-display text-xl font-extrabold tracking-tight sm:text-2xl;
+  }
+
+  .legal-body h3 {
+    @apply mt-6 font-display text-base font-extrabold;
+  }
+
+  .legal-body p {
+    @apply mt-3 leading-relaxed text-ink/70;
+  }
+
+  .legal-body ul {
+    @apply mt-3 list-disc space-y-1.5 pl-5 leading-relaxed text-ink/70;
+  }
+
+  .legal-body li::marker {
+    @apply text-grape;
+  }
+
+  .legal-body a {
+    @apply font-semibold text-grape underline decoration-2 underline-offset-4 hover:decoration-4;
+  }
+
+  .legal-body strong {
+    @apply font-bold text-ink;
+  }
 }
 
 .skip-link {

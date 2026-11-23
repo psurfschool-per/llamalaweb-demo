@@ -7,6 +7,8 @@ const year = new Date().getFullYear();
 
 const links = [
   { href: "#servicios", label: "Servicios" },
+  { href: "#portafolio", label: "Portafolio" },
+  { href: "/blog", label: "Blog" },
   { href: "#planes", label: "Planes" },
   { href: "#mantenimiento", label: "Mantenimiento" },
   { href: "#preguntas", label: "Preguntas frecuentes" },
@@ -16,7 +18,7 @@ const links = [
 
 <footer class="bg-ink pb-8 pt-16 text-cream">
   <div class="container-x">
-    <div class="grid gap-10 border-b-2 border-cream/10 pb-12 sm:grid-cols-2 lg:grid-cols-[1.4fr_0.8fr_0.8fr]">
+    <div class="grid gap-10 border-b-2 border-cream/10 pb-12 sm:grid-cols-2 lg:grid-cols-[1.4fr_0.8fr_0.8fr_0.8fr]">
       <div>
         <Logo class="text-cream" imgClass="h-12 w-auto" />
         <p class="mt-4 max-w-sm leading-relaxed text-cream/55">
@@ -70,6 +72,32 @@ const links = [
         <a href="#contacto" class="btn btn-sm mt-5 border-cream/30 bg-cream text-ink hover:bg-sky">
           Quiero mi web
         </a>
+      </div>
+
+      <div>
+        <p class="font-display text-xs font-bold uppercase tracking-[0.16em] text-cream/55">Legal</p>
+        <ul class="mt-4 flex flex-col gap-2.5">
+          <li>
+            <a href="/terminos-y-condiciones" class="text-sm font-medium text-cream/65 transition-colors hover:text-white">
+              Términos y condiciones
+            </a>
+          </li>
+          <li>
+            <a href="/politica-de-privacidad" class="text-sm font-medium text-cream/65 transition-colors hover:text-white">
+              Política de privacidad
+            </a>
+          </li>
+          <li>
+            <a href="/politica-de-cookies" class="text-sm font-medium text-cream/65 transition-colors hover:text-white">
+              Política de cookies
+            </a>
+          </li>
+          <li>
+            <a href="/libro-de-reclamaciones" class="text-sm font-medium text-cream/65 transition-colors hover:text-white">
+              Libro de reclamaciones
+            </a>
+          </li>
+        </ul>
       </div>
     </div>
 

@@ -1,5 +1,6 @@
 ﻿---
 import Icon from "./Icon.astro";
+import { niches } from "../data/niches";
 
 const services = [
   {
@@ -67,6 +68,20 @@ const services = [
         ))
       }
       </div>
+    </div>
+
+    <div class="reveal mt-10 flex flex-wrap items-center gap-2.5">
+      <span class="text-sm font-semibold text-ink/60">¿De qué rubro es tu negocio?</span>
+      {
+        niches.map((niche) => (
+          <a
+            href={`/${niche.slug}`}
+            class="rounded-full border-2 border-ink bg-white px-3.5 py-1.5 font-display text-xs font-bold transition hover:-translate-y-0.5 hover:bg-grape-soft hover:shadow-pop-sm"
+          >
+            {niche.label}
+          </a>
+        ))
+      }
     </div>
   </div>
 </section>

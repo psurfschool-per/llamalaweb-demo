@@ -1,0 +1,65 @@
+---
+import Legal from "../layouts/Legal.astro";
+import { site } from "../data/site";
+---
+
+<Legal
+  title="Política de Cookies"
+  description="Qué cookies y tecnologías similares usa llamalaweb.com, para qué sirven y cómo puedes gestionarlas o desactivarlas desde tu navegador."
+>
+  <p>
+    Esta política explica qué son las cookies, cuáles usamos en <strong>llamalaweb.com</strong> y cómo
+    puedes controlarlas. Se complementa con nuestra
+    <a href="/politica-de-privacidad">Política de Privacidad</a>.
+  </p>
+
+  <h2>1. ¿Qué es una cookie?</h2>
+  <p>
+    Una cookie es un pequeño archivo que un sitio guarda en tu navegador para recordar información de
+    tu visita (preferencias, idioma, estado de la sesión) o para medir cómo se usa el sitio. Existen
+    tecnologías similares como <em>localStorage</em> o píxeles con funciones parecidas.
+  </p>
+
+  <h2>2. Cookies que usamos</h2>
+  <ul>
+    <li><strong>Técnicas / necesarias:</strong> permiten que el sitio funcione (por ejemplo, recordar preferencias de visualización o el estado del menú). No requieren consentimiento y no te identifican.</li>
+    <li><strong>Analíticas (opcionales):</strong> si activamos herramientas de medición, recogen datos agregados como páginas vistas o tipo de dispositivo, para mejorar el sitio. No usamos publicidad ni cookies de seguimiento de terceros con fines de marketing.</li>
+  </ul>
+  <p>
+    Este sitio no instala cookies publicitarias ni comparte identificadores con redes de anuncios.
+  </p>
+
+  <h2>3. Detalle de almacenamiento</h2>
+  <ul>
+    <li><strong>Preferencias de interfaz:</strong> sesión o persistencia corta, propias, finalidad técnica.</li>
+    <li><strong>Métricas agregadas:</strong> solo si la analítica está activa; se conservan de forma anonimizada o agregada.</li>
+  </ul>
+
+  <h2>4. Cómo gestionarlas</h2>
+  <p>
+    Puedes bloquear o eliminar las cookies desde la configuración de tu navegador en cualquier momento:
+  </p>
+  <ul>
+    <li><strong>Chrome:</strong> Configuración → Privacidad y seguridad → Cookies.</li>
+    <li><strong>Firefox:</strong> Ajustes → Privacidad y seguridad → Cookies y datos del sitio.</li>
+    <li><strong>Safari:</strong> Preferencias → Privacidad → Gestionar datos de sitios web.</li>
+    <li><strong>Edge:</strong> Configuración → Cookies y permisos del sitio.</li>
+  </ul>
+  <p>
+    Desactivar las cookies técnicas puede afectar algunas funciones del sitio (por ejemplo, recordar
+    tus preferencias). El resto del contenido seguirá disponible.
+  </p>
+
+  <h2>5. Cookies de terceros en enlaces externos</h2>
+  <p>
+    Al hacer clic en enlaces externos (WhatsApp, redes sociales o sitios de nuestro portafolio), esos
+    servicios pueden instalar sus propias cookies según sus políticas, sobre las cuales no tenemos control.
+  </p>
+
+  <h2>6. Actualizaciones</h2>
+  <p>
+    Si cambiamos el uso de cookies (por ejemplo, al incorporar una herramienta de analítica),
+    actualizaremos esta página y, cuando corresponda, te pediremos consentimiento mediante un aviso en el sitio.
+    Cualquier duda: <a href={`mailto:${site.email}`}>{site.email}</a>.
+  </p>
+</Legal>
