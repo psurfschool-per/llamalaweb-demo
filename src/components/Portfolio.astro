@@ -23,7 +23,7 @@ const initialsOf = (name: string) =>
       </p>
     </div>
 
-    <p class="mt-5 text-center font-display text-xs font-bold uppercase tracking-[0.14em] text-ink/40 sm:hidden">
+    <p class="mt-5 text-center font-display text-xs font-bold uppercase tracking-[0.14em] text-ink/70 sm:hidden">
       Desliza para ver más webs →
     </p>
 
@@ -42,7 +42,7 @@ const initialsOf = (name: string) =>
                 <span class="h-2.5 w-2.5 rounded-full border-2 border-ink bg-sky" />
                 <span class="h-2.5 w-2.5 rounded-full border-2 border-ink bg-peri" />
               </span>
-              <span class="truncate font-mono text-[0.68rem] font-semibold text-ink/60">
+              <span class="truncate font-mono text-[0.68rem] font-semibold text-ink/70">
                 {domainOf(project.url)}
               </span>
               <a
@@ -68,10 +68,10 @@ const initialsOf = (name: string) =>
               tabindex="-1"
             >
               <span class:list={["pf-ph", project.tile]} aria-hidden="true">
-                <span class="font-display text-4xl font-black tracking-tight text-ink/70">
+                <span class="font-display text-4xl font-black tracking-tight text-ink">
                   {initialsOf(project.name)}
                 </span>
-                <span class="font-display text-[0.65rem] font-bold uppercase tracking-[0.14em] text-ink/45">
+                <span class="font-display text-[0.65rem] font-bold uppercase tracking-[0.14em] text-ink">
                   {project.name}
                 </span>
               </span>
@@ -108,7 +108,7 @@ const initialsOf = (name: string) =>
 
               <ul class="mt-3 flex flex-wrap gap-1.5">
                 {project.tags.map((tag) => (
-                  <li class="rounded-md border-2 border-ink/15 bg-cream px-2 py-0.5 text-[0.65rem] font-semibold text-ink/60">
+                  <li class="rounded-md border-2 border-ink/15 bg-cream px-2 py-0.5 text-[0.65rem] font-semibold text-ink/70">
                     {tag}
                   </li>
                 ))}
@@ -120,7 +120,7 @@ const initialsOf = (name: string) =>
       </div>
     </div>
 
-    <p class="reveal mt-8 text-center text-sm font-medium text-ink/60">
+    <p class="reveal mt-8 text-center text-sm font-medium text-ink/70">
       ¿Quieres una web así para tu negocio?
       <a href="#contacto" class="link-underline font-bold text-ink">Conversemos</a>
     </p>

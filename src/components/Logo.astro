@@ -3,9 +3,11 @@ interface Props {
   class?: string;
   imgClass?: string;
   wordmark?: boolean;
+  /** Color del acento ".com" (por defecto uva; usar tono claro sobre fondos oscuros). */
+  accentClass?: string;
 }
 
-const { class: className = "", imgClass = "h-11 w-auto", wordmark = true } = Astro.props;
+const { class: className = "", imgClass = "h-11 w-auto", wordmark = true, accentClass = "text-grape" } = Astro.props;
 ---
 
 <a
@@ -22,7 +24,7 @@ const { class: className = "", imgClass = "h-11 w-auto", wordmark = true } = Ast
   {
     wordmark && (
       <span class="font-display text-xl font-extrabold tracking-tight sm:text-2xl">
-        llamalaweb<span class="text-grape">.com</span>
+        llamalaweb<span class={accentClass}>.com</span>
       </span>
     )
   }

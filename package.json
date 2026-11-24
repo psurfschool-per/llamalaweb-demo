@@ -10,6 +10,9 @@
     "dev": "astro dev --host 0.0.0.0",
     "build": "astro build",
     "preview": "astro preview --host 0.0.0.0",
+    "serve": "node scripts/serve.mjs",
+    "check:contrast": "node scripts/contrast.mjs",
+    "fonts": "node scripts/selfhost-fonts.mjs",
     "check": "astro check",
     "astro": "astro"
   },

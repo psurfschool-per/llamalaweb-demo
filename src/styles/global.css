@@ -1,4 +1,5 @@
 @import "tailwindcss";
+@import "./fonts.generated.css";
 
 @theme {
   --color-cream: #fbf7ef;
@@ -75,7 +76,7 @@ body {
   }
 
   .field {
-    @apply w-full rounded-xl border-2 border-ink bg-white px-4 py-3 font-medium text-ink placeholder:text-ink/35 focus:outline-none focus:ring-4 focus:ring-grape/25;
+    @apply w-full rounded-xl border-2 border-ink bg-white px-4 py-3 font-medium text-ink placeholder:text-ink/60 focus:outline-none focus:ring-4 focus:ring-grape/25;
   }
 
   .legal-body h2 {

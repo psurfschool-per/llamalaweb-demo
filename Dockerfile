@@ -15,4 +15,4 @@ ENV PORT=3000
 
 EXPOSE 3000
 
-CMD ["sh", "-c", "npm run preview -- --port $PORT"]
+CMD ["node", "scripts/serve.mjs"]
